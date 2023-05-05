@@ -8,7 +8,7 @@ export default function TicTacToe() {
   const [isX, setIsX] = useState(true);
 
   function onClickCell(index: number) {
-    const current = isX ? "X" : "O";
+    const current = isX ? "✖️" : "⭕";
     const newBoard = [...board];
     newBoard[index] = current;
     setBoard(newBoard);
@@ -19,6 +19,7 @@ export default function TicTacToe() {
     <div className={styles.page}>
       <h1>Tic Tac Toe</h1>
       <button
+        className={styles.new}
         type="button"
         onClick={() => {
           setBoard(Array(9).fill(""));
