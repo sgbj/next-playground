@@ -1,0 +1,35 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at 4.3% 10.7%,
+    rgb(138, 118, 249) 13.6%,
+    rgb(75, 252, 235) 100.7%
+  );
+  font-family: system-ui;
+  text-align: center;
+  font-size: 1.1em;
+
+  h1 {
+    background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 1em 0 0.75em 0;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 1.5em;
+  margin-top: 2.5em;
+  justify-content: center;
+}
+
+.cell {
+  width: 5em;
+  height: 5em;
+  background: #fff;
+  color: #000;
+}

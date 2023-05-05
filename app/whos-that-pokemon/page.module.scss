@@ -1,0 +1,108 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at 4.3% 10.7%,
+    rgb(138, 118, 249) 13.6%,
+    rgb(75, 252, 235) 100.7%
+  );
+  font-family: system-ui;
+  text-align: center;
+  font-size: 1.1em;
+
+  h1 {
+    background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 1em 0 0.75em 0;
+  }
+
+  img {
+    filter: brightness(0%);
+    display: block;
+    margin: 2em auto;
+    width: 10em;
+    height: 10em;
+  }
+
+  .new {
+    --box-shadow-color: #fff;
+    --scale: 1;
+    border: 0;
+    border-radius: 1em;
+    background: transparent;
+    color: #fff;
+    font-size: 1.25em;
+    padding: 0.25em 1em;
+    transition: 0.1s ease;
+    box-shadow: 0 0 0 0.075em var(--box-shadow-color);
+    transform: scale(var(--scale));
+  }
+
+  .new:hover {
+    --box-shadow-color: #06cdff;
+    --scale: 1.1;
+  }
+
+  .new:active {
+    --scale: 0.9;
+  }
+
+  .answers {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .answer {
+    transform: skewX(-20deg);
+    background: linear-gradient(
+      109.6deg,
+      rgb(245, 239, 249) 30.1%,
+      rgb(207, 211, 236) 100.2%
+    );
+    border: 0;
+    transition: 0.1s ease;
+    box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
+    padding: 0.5em 2em;
+    border-radius: 0.1em;
+    color: rgba(0, 0, 0, 0.8);
+
+    &:not([disabled]):hover {
+      transform: skewX(-20deg) scale(1.1);
+    }
+
+    span {
+      display: inline-block;
+      transform: skewX(20deg);
+    }
+  }
+}
+
+.page.answered {
+  img {
+    filter: none;
+    transition: 0.1s ease;
+  }
+
+  .correct {
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgb(89, 195, 195) 0%,
+      rgb(14, 175, 181) 90%
+    );
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .incorrect {
+    background: linear-gradient(
+      69.7deg,
+      rgb(216, 81, 82) 40%,
+      rgb(154, 27, 69) 100.1%
+    );
+    color: rgba(255, 255, 255, 0.9);
+  }
+}

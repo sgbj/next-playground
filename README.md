@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Playground
+
+- Memory game
+- Who's that Pokemon?
+- Tic-Tac-Toe
+
 ## Getting Started
 
 First, run the development server:

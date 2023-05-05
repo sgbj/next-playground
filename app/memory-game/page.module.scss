@@ -1,0 +1,125 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at 4.3% 10.7%,
+    rgb(138, 118, 249) 13.6%,
+    rgb(75, 252, 235) 100.7%
+  );
+  font-family: system-ui;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.title {
+  background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  margin: 0 auto 0 auto;
+  padding: 1em 0 0.75em 0;
+}
+
+.new {
+  --box-shadow-color: #fff;
+  --scale: 1;
+  border: 0;
+  border-radius: 1em;
+  background: transparent;
+  color: #fff;
+  font-size: 1.25em;
+  padding: 0.25em 1em;
+  transition: 0.1s ease;
+  box-shadow: 0 0 0 0.075em var(--box-shadow-color);
+  transform: scale(var(--scale));
+}
+
+.new:hover {
+  --box-shadow-color: #06cdff;
+  --scale: 1.1;
+}
+
+.new:active {
+  --scale: 0.9;
+}
+
+.board {
+  margin-top: 2.5em;
+  display: grid;
+  grid-template-columns: repeat(5, min-content);
+  gap: 1.5em;
+  justify-content: center;
+}
+
+.card {
+  --box-shadow-color: transparent;
+  --scale: 1;
+  cursor: pointer;
+  width: 2em;
+  height: 3em;
+  background: linear-gradient(
+    109.6deg,
+    rgb(245, 239, 249) 30.1%,
+    rgb(207, 211, 236) 100.2%
+  );
+  font-size: 3em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 0.3em;
+  color: inherit;
+  transition: 0.3s ease;
+  box-shadow: 0 0 0 0.05em var(--box-shadow-color),
+    0 0.25em 0.25em rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+  opacity: 1;
+  transform: perspective(10em) scale(var(--scale));
+  user-select: none;
+}
+
+.card.down:hover {
+  transition: none;
+  transform: perspective(10em) rotateY(calc(var(--x) * 45deg))
+    rotateX(calc(var(--y) * -45deg)) scale(var(--scale));
+}
+
+.down:hover:not([disabled]) {
+  --scale: 1.1;
+}
+
+.down:active:not([disabled]) {
+  --scale: 0.9;
+}
+
+.down {
+  --box-shadow-color: #f1f6f5;
+}
+
+.selected {
+  --box-shadow-color: #06cdff;
+  --scale: 1.1;
+  transform: rotateY(180deg);
+}
+
+.up {
+  --box-shadow-color: #00c9b1;
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 800px) {
+  .board {
+    grid-template-columns: repeat(4, min-content);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, min-content);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .board {
+    grid-template-columns: repeat(2, min-content);
+  }
+}
