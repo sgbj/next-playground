@@ -2,9 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Playground
 
-- Memory game
 - Who's that Pokemon?
+
+  ![image](https://user-images.githubusercontent.com/5178445/236358557-e4c27cce-bffe-4901-9a49-121e4a6c79d4.png)
+- Memory game
+  
+  ![image](https://user-images.githubusercontent.com/5178445/236358517-f7cff3c1-e4ff-4152-a89f-08f1fd988ca8.png)
 - Tic-Tac-Toe
+
+  ![image](https://user-images.githubusercontent.com/5178445/236358871-0a40f56b-63eb-4319-8795-27c0a498730f.png)
 
 ## Getting Started
 
